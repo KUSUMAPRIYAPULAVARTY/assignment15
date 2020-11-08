@@ -165,7 +165,12 @@ where $\mathbbf{R}^{2 \times 2}$,is the space of all $2 \times 2$ real matrices\
  \text{Let } \vec{A}=\myvec{1&7\\0&-10}\\
  \vec{B}=\myvec{0&5\\1&-7}\\
  \implies  \mathbbf{T}(\vec{x})=\myvec{\vec{A}\vec{x}&\vec{B}\vec{x}}\\
-  \mathbbf{T}(\vec{x})=\myvec{\vec{A}&\vec{B}}\myvec{\vec{x}&\vec{0}_{2 \times 1}\\\vec{0}_{2 \times 1}&\vec{x}}
+  \mathbbf{T}(\vec{x})=\myvec{\vec{A}&\vec{B}}\myvec{\vec{x}&\vec{0}_{2 \times 1}\\\vec{0}_{2 \times 1}&\vec{x}}\label{1}
+\end{align}
+The kronecker product of $\vec{I},\vec{x}$ gives the block matrix
+\begin{align}
+    \vec{I}_{2 \times 2}\otimes \vec{x}_{2\times 1}=\myvec{\vec{x}&\vec{0}\\\vec{0}&\vec{x}}_{4 \times 2}\\
+    \eqref{1} \implies  \mathbbf{T}(\vec{x})= \myvec{\vec{A}&\vec{B}}\vec{I}\otimes \vec{x}
 \end{align}
 Verifying if the matrices $\vec{A},\vec{B}$ are independent.
 \begin{align}
