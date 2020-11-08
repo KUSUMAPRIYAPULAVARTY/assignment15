@@ -170,20 +170,13 @@ where $\mathbbf{R}^{2 \times 2}$,is the space of all $2 \times 2$ real matrices\
 The kronecker product of $\vec{I},\vec{x}$ gives the block matrix
 \begin{align}
     \vec{I}_{2 \times 2}\otimes \vec{x}_{2\times 1}=\myvec{\vec{x}&\vec{0}\\\vec{0}&\vec{x}}_{4 \times 2}\\
-    \eqref{1} \implies  \mathbbf{T}(\vec{x})= \myvec{\vec{A}&\vec{B}}\vec{I}\otimes \vec{x}
-\end{align}
-Verifying if the matrices $\vec{A},\vec{B}$ are independent.
-\begin{align}
-    c_1\vec{A}+c_2\vec{B}=\vec{0}\\
-    \myvec{1&0\\7&5\\0&1\\-10&-7}\myvec{c_1\\c_2}=\vec{0}\\
-    \myvec{1&0\\7&5\\0&1\\-10&-7}\xleftrightarrow[R_2\xleftarrow{}R_2-7R_1]{R4\xleftarrow{}R_4+10R_1}\myvec{1&0\\0&5\\0&1\\0&-7}\\
-    \xleftrightarrow[R_2\xleftarrow{}\frac{R_2}{5}]{R_4\xleftarrow{}\frac{R_4}{-7}}\myvec{1&0\\0&1\\0&1\\0&1}\\
-     \xleftrightarrow[R_3\xleftarrow{}R_3-R_2]{R_4\xleftarrow{}R_4-R_2}\myvec{1&0\\0&1\\0&0\\0&0}\\
-     \implies c_1,c_2=0
-\end{align}
-Hence $\vec{A},\vec{B}$ are independent and 
-\begin{align}
-    \text{range}(\mathbbf{T})=\\\text{span of }\cbrak{\myvec{1&7\\0&-10},\myvec{0&5\\1&-7}}
+    \eqref{1} \implies  \mathbbf{T}(\vec{x})= \myvec{\vec{A}&\vec{B}}\vec{I}\otimes \vec{x}\\
+    =\myvec{\vec{A}&\vec{B}}\vec{I}\otimes\left[\myvec{x\\0}+\myvec{0\\y}\right]\\
+    =\myvec{\vec{A}&\vec{B}} \left[\vec{I}\otimes \myvec{x\\0}+\vec{I}\otimes \myvec{0\\y}\right]\\
+   =\myvec{\vec{A}&\vec{B}}  \vec{I}\otimes \myvec{x\\0}+\myvec{\vec{A}&\vec{B}}  \vec{I}\otimes \myvec{0\\y}\\
+   =x\myvec{\vec{A}&\vec{B}}  \vec{I}\otimes \myvec{1\\0}+y\myvec{\vec{A}&\vec{B}}  \vec{I}\otimes \myvec{0\\1}\\
+   \vec{x}=x\myvec{1\\0}+y\myvec{0\\1}\\
+   \mathbbf{T}(\vec{x})=x\myvec{\vec{A}&\vec{B}}\vec{I}\otimes \myvec{1\\0}+y\myvec{\vec{A}&\vec{B}}  \vec{I}\otimes \myvec{0\\1}
 \end{align}
 \end{document}
 
