@@ -176,9 +176,13 @@ The kronecker product of $\vec{I},\vec{x}$ gives the block matrix
    \vec{I}\otimes \myvec{1\\0}=\myvec{1&0\\0&0\\0&1\\0&0}\\
    \vec{I}\otimes \myvec{0\\1}=\myvec{0&0\\1&0\\0&0\\0&1}
 \end{align}
-Kronecker product in the first term of \eqref{2} picks out 1st columns of $\vec{A},\vec{B}$ and in the second term picks out 2nd columns of $\vec{A},\vec{B}$ so
+Kronecker product in the first term of \eqref{2} picks out 1st columns of $\vec{A},\vec{B}$ and in the second term picks out 2nd columns of $\vec{A},\vec{B}$ so basis for range($\mathbbf{T}$) is
 \begin{align}
-    \text{range}(\mathbbf{T})=\text{span of }\cbrak{\myvec{1&0\\0&1},\myvec{7&5\\-10&-7}}
+    \cbrak{\myvec{\vec{A}&\vec{B}}  \vec{I}\otimes \myvec{1\\0},\myvec{\vec{A}&\vec{B}}  \vec{I}\otimes \myvec{0\\1}}=\\\cbrak{\myvec{1&0\\0&1},\myvec{7&5\\-10&-7}}
+\end{align}
+\begin{align}
+    \text{range}(\mathbbf{T})
+    =\\\text{span of }\cbrak{\myvec{1&0\\0&1},\myvec{7&5\\-10&-7}}
 \end{align}
 \end{document}
 
